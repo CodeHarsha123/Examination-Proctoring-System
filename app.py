@@ -6,7 +6,6 @@ import time
 from proctoring.face_detection import detect_faces
 from proctoring.head_movement import detect_head_movement
 from proctoring.mobile_detection import detect_mobile
-from proctoring.noise_detection import detect_noise
 from proctoring.logger import log_event
 from questions.python_questions import questions
 
@@ -106,7 +105,7 @@ def start_exam():
     count = 0
     exam_active = True
 
-    threading.Thread(target=detect_noise, daemon=True).start()
+    # threading.Thread(target=detect_noise, daemon=True).start()
     return render_template('exam.html', questions=questions)
 
 @app.route('/video_feed')
