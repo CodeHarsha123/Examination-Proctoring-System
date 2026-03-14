@@ -1,0 +1,6 @@
+flask
+opencv-python
+numpy
+mediapipe
+pyaudio
+playsound==1.2.2

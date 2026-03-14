@@ -1,0 +1,62 @@
+# Exam Proctoring Project - Execution Guide
+
+## Prerequisites
+- Python 3.7+ installed
+- Webcam and microphone available
+- Virtual environment set up
+
+## Execution Command
+Run this command in a PowerShell terminal from the project root directory:
+
+```
+& "C:/Users/harsh/OneDrive/Desktop/Exam Proctoring/.venv/Scripts/python.exe" app.py
+```
+
+## Full Setup and Run Process
+If starting fresh:
+
+1. **Navigate to project directory:**
+   ```
+   cd "C:\Users\harsh\OneDrive\Desktop\Exam Proctoring"
+   ```
+
+2. **Activate virtual environment:**
+   ```
+   & "C:/Users/harsh/OneDrive/Desktop/Exam Proctoring/.venv/Scripts/Activate.ps1"
+   ```
+
+3. **Install dependencies:**
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application:**
+   ```
+   python app.py
+   ```
+
+## Access the Application
+Once running, open your browser and go to: http://127.0.0.1:5000/
+
+## Notes
+- The application uses Flask with debug mode enabled
+- It requires camera access for face detection and mobile detection
+- Microphone access is needed for noise detection
+- The server runs on port 5000 by default
+- To stop the server, press Ctrl+C in the terminal
+
+## Project Structure
+- app.py: Main Flask application
+- requirements.txt: Python dependencies
+- proctoring/: Detection modules (face, head movement, mobile, noise)
+- questions/: Question sets
+- static/: CSS, JS, sounds, captures
+- templates/: HTML templates
+
+## Features
+- Real-time video monitoring
+- Face detection using OpenCV
+- Mobile phone detection
+- Noise level monitoring
+- Automatic exam termination on violations
+- Web-based interface

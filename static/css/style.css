@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #6c757d;
+    --danger-color: #e74c3c;
+    --background-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.btn-submit {
+    background-color: var(--danger-color);
+    /* To make it stand out */
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Exam Page Layout */
+.exam-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--danger-color);
+    background: #fff0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--danger-color);
+}
+
+.monitor-feed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 280px;
+    z-index: 1000;
+    text-align: center;
+    background: #000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.monitor-feed img {
+    border: 2px solid #444;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+.monitor-status {
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #00ff00;
+    /* Green by default */
+}
+
+.monitor-status.warning {
+    color: #ff0000;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Add padding to container so video doesn't overlap text on small screens */
+.exam-container {
+    padding-top: 20px;
+    max-width: 800px;
+    margin-right: 320px;
+    /* Make space for video */
+}
+
+.questions-form {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.question-block {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.question-text {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-label {
+    cursor: pointer;
+    padding: 5px;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+
+.option-label:hover {
+    background: #f0f0f0;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
