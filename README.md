@@ -1,4 +1,4 @@
-# 🎓 AI-Based Online Examination Proctoring System
+# 🎓 Examination Proctoring System
 
 An intelligent AI-powered remote proctoring system built using **Flask** and **OpenCV** to ensure fair and secure online examinations.
 
